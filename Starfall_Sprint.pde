@@ -5,7 +5,7 @@ Player player;
 
 void setup(){
   size(1000,600);
-  player = new Player(width/2, height/2, 50, 5);
+  player = new Player(width/2, height/2, 50, 3);
 }
 
 void draw(){
@@ -23,24 +23,20 @@ void draw(){
       y += 30;
     }
   }
-  // end of stupid grid
+  // end of cool grid
   player.display();
-}
-
-void keyPressed(){
-  if (key == 'w'){
-    player.move(0, -player.getSpeed());
-  }
   
-  if (key == 'a'){
-    player.move(-player.getSpeed(),0);
-  }
-  
-  if (key == 's'){
-    player.move(0,player.getSpeed());
-  }
-  
-  if (key == 'd'){
-    player.move(player.getSpeed(),0);
-  }
+  if (keyPressed) {
+    if (key == 'w' || key == 'W') {
+      player.move(0, -player.getSpeed()); 
+    }
+    if (key == 'a' || key == 'A') {
+      player.move(-player.getSpeed(), 0); 
+    }
+    if (key == 's' || key == 'S') {
+      player.move(0, player.getSpeed()); 
+    }
+    if (key == 'd' || key == 'D') { 
+      player.move(player.getSpeed(), 0); }
+    }
 }
