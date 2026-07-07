@@ -14,24 +14,12 @@ class Player{
   
   public void display(){
     fill(playerc);
-    ellipse(x, y, size, size);
-    triangle(x, y, x + 25, y - 25, x + 50, y);
+    triangle(x - 25, y + 20, x, y - 25, x + 25, y + 20);
   }    
   
-   public void moveUp() {
-     y -= speed; 
-  }
-  
-  public void moveRight() {
-     x += speed; 
-  }
-  
-  public void moveDown() {
-     y += speed; 
-  }
-  
-  public void moveLeft() {
-     x -= speed; 
+  public void move(int dx, int dy) {
+     x += dx;
+     y += dy; 
   }
  
     // getters
@@ -46,6 +34,10 @@ class Player{
   public int getSize() {
     return size;
   }
+  
+  public int getSpeed() {
+    return speed;
+  }
 
   // setters
   public void setX(float x) {
@@ -54,6 +46,10 @@ class Player{
 
   public void setY(float y) {
     this.y = y;
+  }
+  
+  public void setSpeed(int speed) {
+    this.speed = speed;
   }
   
 }

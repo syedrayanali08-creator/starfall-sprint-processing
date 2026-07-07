@@ -1,3 +1,6 @@
+// Starfall Sprint
+// recreating a cool game codex made for me from scratch while learning oop in javas processing environment
+
 Player player;
 
 void setup(){
@@ -26,18 +29,18 @@ void draw(){
 
 void keyPressed(){
   if (key == 'w'){
-    player.moveUp();
+    player.move(0, -player.getSpeed());
   }
   
   if (key == 'a'){
-    player.moveLeft();
+    player.move(-player.getSpeed(),0);
   }
   
   if (key == 's'){
-    player.moveDown();
+    player.move(0,player.getSpeed());
   }
   
   if (key == 'd'){
-    player.moveRight();
+    player.move(player.getSpeed(),0);
   }
 }
