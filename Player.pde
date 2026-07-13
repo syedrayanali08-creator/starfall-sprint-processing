@@ -18,7 +18,9 @@ class Player{
   }    
   
   public void move(int dx, int dy) {
-     x += dx;
+     if (0 <= x+dx-25 && x+dx+25 <= width){
+       x += dx;
+     }
      y += dy; 
   }
  

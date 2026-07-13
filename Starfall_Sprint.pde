@@ -26,6 +26,7 @@ void draw(){
   // end of cool grid
   player.display();
   
+  //updated movement logic
   if (keyPressed) {
     if (key == 'w' || key == 'W') {
       player.move(0, -player.getSpeed()); 
